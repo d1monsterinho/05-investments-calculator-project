@@ -6,7 +6,7 @@ function Header() {
             <img id="header img" src={investmentCalculatorLogo} />
             <h1 id="header h1">React Investment Calculator</h1>
         </div>
-    )
+    );
 }
 
 export default Header;
