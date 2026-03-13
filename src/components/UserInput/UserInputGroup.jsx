@@ -1,4 +1,3 @@
-import { useState } from "react";
 import UserInput from "./UserInput";
 
 const userInputJson = {
@@ -8,18 +7,12 @@ const userInputJson = {
     duration: 0,
 };
 
-function UserInputGroup() {
-    const [userInputs, setUserInputs] = useState({
-        initialInvestment: 0,
-        annualInvestment: 0,
-        expectedReturn: 0,
-        duration: 0,
-    });
+function UserInputGroup({ setUserInputs, userInputs }) {
 
     function handleInputChange(inputIdentifier, value) {
         setUserInputs((prev) => ({
             ...prev,
-            [inputIdentifier]: value
+            [inputIdentifier]: +value
         }));
     }
 
